@@ -55,7 +55,7 @@ export default function Home() {
       <div className="mt-8">
         <Snippet hideSymbol hideCopyButton variant="flat">
           <span>
-            https://www.onepeloton.com{" "}
+            www.onepeloton.com{" "}
             <Link
               isExternal
               className={buttonStyles({
