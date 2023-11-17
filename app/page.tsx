@@ -42,7 +42,9 @@ export default function Home() {
       </div>
 
       <div className="flex gap-3">
-        <Button onClick={handleCopyCode}>Copy Code</Button>
+        <Button radius="full" onClick={handleCopyCode}>
+          Copy Code
+        </Button>
         <Link
           isExternal
           className={buttonStyles({ variant: "bordered", radius: "full" })}
@@ -52,7 +54,7 @@ export default function Home() {
         </Link>
       </div>
 
-      <div className="mt-8">
+      {/* <div className="mt-8">
         <Snippet hideSymbol hideCopyButton variant="flat">
           <span>
             www.onepeloton.com{" "}
@@ -60,7 +62,8 @@ export default function Home() {
               isExternal
               className={buttonStyles({
                 color: "primary",
-                radius: "full",
+                radius: "sm",
+                variant: "faded",
               })}
               href={siteConfig.links.peleton}
             >
@@ -68,7 +71,7 @@ export default function Home() {
             </Link>
           </span>
         </Snippet>
-      </div>
+      </div> */}
       <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
         <ModalContent>
           {(onClose) => (
