@@ -8,6 +8,7 @@ import { Providers } from "./providers";
 import clsx from "clsx";
 import { fontSans } from "@/config/fonts";
 import { siteConfig } from "@/config/site";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: {
@@ -33,7 +34,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head />
+      <head>
+        <Script src="https://www.googletagmanager.com/gtag/js?id=AW-11419208485" />
+
+        <Script id="google-tag">
+          {`window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'AW-11419208485');`}
+        </Script>
+      </head>
       <body
         className={clsx(
           "min-h-screen bg-background font-sans antialiased",

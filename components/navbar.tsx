@@ -55,7 +55,7 @@ export const Navbar = () => {
           <NextLink className="flex justify-start items-center gap-1" href="/">
             {/* <Logo /> */}
             <p className="text-inherit">
-              <span className="font-bold">Peleton</span> Promo Code
+              <span className="font-bold">Tesla</span> Referral Code
             </p>
           </NextLink>
         </NavbarBrand>

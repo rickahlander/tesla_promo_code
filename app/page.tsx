@@ -17,7 +17,7 @@ import { button as buttonStyles } from "@nextui-org/theme";
 import { copyTextToClipboard } from "@/utils/copyToClipboard";
 import { siteConfig } from "@/config/site";
 
-const code = "VQMNQZ";
+const code = "rick52956";
 
 export default function Home() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -31,13 +31,13 @@ export default function Home() {
   return (
     <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
       <div className="inline-block max-w-lg text-center justify-center">
-        <h1 className={title()}>Peleton&nbsp;</h1>
-        <h1 className={title({ color: "violet" })}>Promo Code&nbsp;</h1>
+        <h1 className={title()}>Tesla&nbsp;</h1>
+        <h1 className={title({ color: "red" })}>Referral Code&nbsp;</h1>
         <br />
         <h2 className={subtitle({ class: "mt-4" })}>
-          Use code <strong>{code}</strong> at checkout to get{" "}
-          <span className={title({ color: "pink", size: "xs" })}>$100 off</span>{" "}
-          accessories when ordering a Peloton Bike, Bike+, Tread, or Row.*
+          Use code <strong>{code}</strong> when ordering to{" "}
+          <span className={title({ color: "red", size: "xs" })}>Save</span>{" "}
+          with Free Supercharging, Complementary Full Self-Driving, or $500 off Solar *
         </h2>
       </div>
 
@@ -48,9 +48,9 @@ export default function Home() {
         <Link
           isExternal
           className={buttonStyles({ variant: "bordered", radius: "full" })}
-          href={siteConfig.links.peleton}
+          href={siteConfig.links.tesla}
         >
-          Visit Peleton
+          Visit Tesla
         </Link>
       </div>
 
@@ -65,9 +65,9 @@ export default function Home() {
                 radius: "sm",
                 variant: "faded",
               })}
-              href={siteConfig.links.peleton}
+              href={siteConfig.links.tesla}
             >
-              Visit Peleton
+              Visit Tesla
             </Link>
           </span>
         </Snippet>
@@ -83,11 +83,11 @@ export default function Home() {
                 <p>
                   Visit{" "}
                   <a
-                    href="https://www.onepeloton.com/"
+                    href="https://ts.la/rick52956"
                     style={{ textDecoration: "underline" }}
                     target="_blank"
                   >
-                    www.onepeleton.com
+                    www.tesla.com
                   </a>{" "}
                   to use code.
                 </p>
@@ -102,9 +102,9 @@ export default function Home() {
                     variant: "bordered",
                     radius: "full",
                   })}
-                  href={siteConfig.links.peleton}
+                  href={siteConfig.links.tesla}
                 >
-                  Visit Peleton
+                  Visit Tesla
                 </Link>
               </ModalFooter>
             </>
