@@ -16,6 +16,7 @@ import { Snippet } from "@nextui-org/snippet";
 import { button as buttonStyles } from "@nextui-org/theme";
 import { copyTextToClipboard } from "@/utils/copyToClipboard";
 import { siteConfig } from "@/config/site";
+import { GTM_ID, copyclick, linkclick } from "../utils/gtm";
 
 const code = "rick52956";
 
@@ -26,6 +27,11 @@ export default function Home() {
     console.log("copying code");
     copyTextToClipboard(code);
     onOpen();
+    copyclick(GTM_ID);
+  };
+
+  const handleClick = () => {
+    linkclick(GTM_ID);
   };
 
   return (
@@ -37,7 +43,7 @@ export default function Home() {
         <h2 className={subtitle({ class: "mt-4" })}>
           Use code <strong>{code}</strong> when ordering to{" "}
           <span className={title({ color: "red", size: "xs" })}>Save</span>{" "}
-          with Free Supercharging, Complementary Full Self-Driving, or $500 off Solar *
+          with 6 Months Free Supercharging + 3 Months Full Self-Driving, or $500 off Solar *
         </h2>
       </div>
 
@@ -46,6 +52,7 @@ export default function Home() {
           Copy Code
         </Button>
         <Link
+          onClick={handleClick}
           isExternal
           className={buttonStyles({ variant: "bordered", radius: "full" })}
           href={siteConfig.links.tesla}
@@ -97,6 +104,7 @@ export default function Home() {
                   Close
                 </Button>
                 <Link
+                  onClick={handleClick}
                   isExternal
                   className={buttonStyles({
                     variant: "bordered",

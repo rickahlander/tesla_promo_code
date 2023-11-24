@@ -14,3 +14,15 @@ declare global {
       page_path: url,
     });
   };
+
+  export const linkclick = (GA_MEASUREMENT_ID?: string) => {
+    if (!GA_MEASUREMENT_ID) return;
+    if (!window?.gtag) return;
+    window.gtag("event", "ClickOpen",{});
+  };
+
+  export const copyclick = (GA_MEASUREMENT_ID?: string) => {
+    if (!GA_MEASUREMENT_ID) return;
+    if (!window?.gtag) return;
+    window.gtag("event", "ClickCopy",{});
+  };
