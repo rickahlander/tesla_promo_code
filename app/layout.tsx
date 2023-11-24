@@ -1,14 +1,14 @@
 import "@/styles/globals.css";
 
 import { Analytics } from "@vercel/analytics/react";
-import { Link } from "@nextui-org/link";
+import GoogleAnalytics from "@/utils/googleTracking";
 import { Metadata } from "next";
 import { Navbar } from "@/components/navbar";
 import { Providers } from "./providers";
 import clsx from "clsx";
 import { fontSans } from "@/config/fonts";
 import { siteConfig } from "@/config/site";
-import Script from "next/script";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: {
@@ -35,15 +35,6 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <Script src="https://www.googletagmanager.com/gtag/js?id=AW-11419208485" />
-
-        <Script id="google-tag">
-          {`window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'AW-11419208485');`}
-        </Script>
       </head>
       <body
         className={clsx(
@@ -52,6 +43,9 @@ export default function RootLayout({
         )}
       >
         <Analytics />
+        <Suspense>
+          <GoogleAnalytics />
+        </Suspense>
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <div className="relative flex flex-col h-screen">
             <Navbar />
